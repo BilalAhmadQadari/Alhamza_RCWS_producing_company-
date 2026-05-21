@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="btn">Click me</button>
+    </div>
+</body>
+<script>
+    let cart =[];
+    let products =[
+    {
+        image: "lslll",
+        name: "ahmad",
+        info: "info is best"
+    },{
+        image: "lslll",
+        name: "ahmad",
+        info: "info is best"
+    }]
+    let btn = document.querySelector("#btn");
+    btn.addEventListener("click",function(){
+        cart.push(products);
+        console.log(products);
+    })
+    console.log(cart)
+
+</script>
+</html>
