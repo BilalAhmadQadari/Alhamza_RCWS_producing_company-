@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./header_footer_style.css">
+    <title>create account</title>
+
+</head>
+<body>
+     <div class="form-wrapper">
+        <h2>Registration</h2>
+        <form id="regForm" class="form-grid" novalidate>
+            <!-- Name -->
+            <div class="field-group">
+                <label for="name">Full Name <span class="required-star">*</span></label>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g. Maria Santos"
+                required
+                autocomplete="name"
+                minlength="4"
+                maxlength="80"
+                >
+            </div>
+
+            <!-- Province -->
+            <div class="field-group">
+                <label for="province">Province <span class="required-star">*</span></label>
+                <input type="text" list="province" placeholder="Select your province">
+                <datalist id="province" name="province">
+
+                    <option value="کندهار"></option>
+                    <option value="هلمند"></option>
+                    <option value="کابل"></option>
+                    <option value="غزنی"></option>
+                    <option value="ننګرهار"></option>
+                    <option value="خوست"></option>
+                    <option value="هرات"></option>
+                    <option value="مزارشریف"></option>
+                    
+                </datalist>
+            </div>
+
+            <!-- Age -->
+            <div class="field-group">
+                <label for="age">Age <span class="required-star">*</span></label>
+                <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="18-120"
+                min="1"
+                max="150"
+                inputmode="numeric"
+                >
+            </div>
+
+            <!-- Gender (checkboxes) -->
+            <div class="field-group span-full">
+                <label>Gender <span class="required-star">*</span></label>
+                <div class="checkbox-group" id="genderGroup">
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="gender" value="Male">
+                        Male
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="gender" value="Female">
+                        Female
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- Email -->
+            <div class="field-group">
+                <label for="email">Email Address <span class="required-star">*</span></label>
+                <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+                autocomplete="email"
+                >
+            </div>
+
+            <!-- Password -->
+            <div class="field-group">
+                <label for="password">Password <span class="required-star">*</span></label>
+                <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Min. 8 characters"
+                required
+                minlength="8"
+                autocomplete="new-password"
+                >
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn-submit"> Submit Registration</button>
+        </form>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast"></div>
+</body>
+<script src="./form.js"></script>
+</html>

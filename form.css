@@ -1,0 +1,52 @@
+@font-face {
+    font-family: bahij;
+    src: url(./Bahij\ Lotus-Bold.ttf);
+}
+   
+   *{
+      box-sizing:border-box;
+     font-family: bahij;
+    }
+
+    body{
+      
+      display: flex;
+      background:#f8f8f8;
+    }
+    .form-container{
+      font-weight: bolder;
+      display: flex;
+      justify-content: center;
+    }
+    
+    form{
+      width:100%;
+      max-width:500px;
+      background:white;
+      padding:20px;
+      border-radius:10px;
+    }
+
+    input,select,button{
+      border-radius:10px;
+      width:100%;
+      padding:10px;
+      margin:8px 0;
+    }
+
+    .gender{
+      display:flex;
+      gap:10px;
+      margin:10px 0;
+    }
+
+    button{
+      background:rgb(48, 113, 244);
+      color:white;
+      border:none;
+      cursor:pointer;
+    }
+    @media (max-wdidth: 768px) {
+
+        
+    }

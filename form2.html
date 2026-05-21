@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <link rel="stylesheet" href="./header_footer_style.css">
+    <link rel="stylesheet" href="form.css">
+
+  <title>Simple Form</title>
+    
+    
+</head>
+
+<body>
+
+<div class="header-container">
+        <div class="logo-and-name">
+        <img src="./asset/logo.png" alt="alhamza company name" class="logo">
+        <h2 class="company-name">الحمزة الیکترونیکي اسلحو تولیدي شرکت</h2>
+        </div>
+        <div class="toggle-btn" onclick="toggleMenu()" id="upper">☰</div>
+
+        <div class="menues" id="mobileMenu">
+        <ul class="menues-list">
+            <li class="menuIcons"> <a href="index2.html" id="homePage">کورپاڼه</a></li>
+            <li class="menuIcons"> <a href="product.html" id="product">تولیدات</a> </li>
+            <li class="menuIcons" > <a href="about.html" id="contac">زموږ په اړه</a></li>
+            <li class="menuIcons"> <a href="loginPagee.html" id="login">ننوتل</a></li>
+            <li class="menuIcons"><a href="./form2.html" id="create-acount">نوی حساب</a></li>
+        </ul>
+        </div>
+
+    </div>
+
+<main style="flex: 1;">
+
+<div class="form-container" >
+  <form onsubmit="return validate()">
+
+    <input type="text" id="name" placeholder="نوم">
+
+    <input type="text" list="province" placeholder="ولایت">
+    <datalist id="province">
+      <option value="">ولایت</option>
+      <option>کندهار</option>
+      <option>کابل</option>
+      <option>هرات</option>
+      <option>هلمند</option>
+    </datalist>
+
+    <input type="number" id="age" placeholder="عمر">
+
+    <div class="gender">
+      <label><input type="checkbox" id="male"> نارینه</label>
+      <label><input type="checkbox" id="female"> ښځینه</label>
+    </div>
+
+    <input type="email" id="email" autocomplete="off" placeholder="بریښنالیک">
+
+    <input type="password" id="password" autocomplete="off" placeholder="رمز">
+
+    <button>لیږل</button>
+
+  </form>
+  </div>
+</main>
+<!-- footer section -->
+
+
+<footer class="main-footer">
+    <div class="footer-container">
+
+      <div class="footer-box">
+        <h3>اړیکه</h3>
+        <p>📍 کابل، افغانستان</p>
+        <p>📞 0700748864</p>
+        <p>📧 info@alhamza.com</p>
+      </div>
+
+      <div class="footer-box">
+        <h3>ټولنیزې پاڼې</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1Dgz1vuKxM/">Facebook 📘 </a>
+          <a href="#">Twitter 🕊️</a>
+          <a href="#">Instagram 📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy 2026 الحمزة الیکترونیکي شرکت - ټول حقوق خوندي دي.</p>
+    </div>
+  </footer>
+
+</body>
+<script>
+
+function validate(){
+
+  let name = document.getElementById("name").value;
+  let province = document.getElementById("province").value;
+  let age = document.getElementById("age").value;
+  let male = document.getElementById("male").checked;
+  let female = document.getElementById("female").checked;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  
+  console.group();
+  console.log("Name: ",name," Age: ", age," Male: ",male," Email: ",email," Password: ",password," Female: ",female);
+  console.groupEnd();
+
+  const afghanistanProvinces = [
+  "کابل",
+  "کندهار",
+  "هرات",
+  "بلخ",
+  "ننګرهار",
+  "کندز",
+  "بغلان",
+  "بدخشان",
+  "تخار",  "سمنگان", "جوزجان",  "فارياب",  "سرپل",
+    "بامیان",  "دایکندی",  "غزني",  "پکتیا",  "پکتیکا",  "خوست",  "لوګر",  "وردک",
+  "پروان",  "کاپیسا",  "پنجشیر",  "لغمان",  "کنړ",  "نورستان",  "هلمند",
+  "زابل", "ارزگان",  "فراه",  "بادغیس",  "غور",  "نیمروز"
+];
+
+  
+
+  if(name == ""){
+    alert("Enter name");
+    return false;
+  }
+  // if(name.length<3){
+  //   alert("Invalid name!")\
+  //   return false;
+  // }
+
+  if(province == ""){
+    alert("Select province");
+    return false;
+  }
+  // if(!afghanistanProvinces.includes(province.trim().normalize())){
+  //   alert("Invlid province name");
+  //   return false;
+  // }
+
+  if(age < 1){
+    alert("Enter valid age");
+    return false;
+  }
+
+  if(!male && !female){
+    alert("Select gender");
+    return false;
+  }
+
+  if(!email.includes("@")){
+    alert("Enter valid email");
+    return false;
+  }
+
+  if(password.length < 8){
+    alert("Password must be 8 characters");
+    return false;
+  }
+
+  alert("Form Submitted");
+  return true;
+}
+
+</script>
+<script src="./script.js"></script>
+
+</html>

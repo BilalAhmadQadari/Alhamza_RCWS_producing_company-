@@ -1,0 +1,26 @@
+
+/* ABOUT SECTION */
+.about {
+  padding: 80px 20px;
+  background: #f5f5f5;
+  min-height: 70vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ننوتل</title>
+  
+  <link rel="icon" href="./asset/logo.png" />
+   <link rel="stylesheet" href="header_footer_style.css">
+  <link rel="stylesheet" href="loginPageStyle.CSS">
+
+</head>
+<body>
+
+
+  <div class="header-container">
+    <div class="logo-and-name">
+      <img src="./asset/logo.png" alt="alhamza company name" class="logo">
+      <h2 class="company-name">الحمزة الیکترونیکي اسلحو تولیدي شرکت</h2>
+    </div>
+    <div class="toggle-btn" onclick="toggleMenu()">☰</div>
+
+    <div class="menues" id="mobileMenu">
+      <ul class="menues-list">
+        <li class="menuIcons"> <a href="index2.html" id="homePage">کورپاڼه</a></li>
+        <li class="menuIcons"> <a href="product.html" id="product">تولیدات</a> </li>
+        <li class="menuIcons" > <a href="about.html" id="contac">زموږ په اړه</a></li>
+        <li class="menuIcons"> <a href="loginPagee.html" id="login">ننوتل</a></li>
+        <li class="menuIcons"><a href="form2.html" id="create-acount">نوی حساب</a></li>
+      </ul>
+    </div>
+  </div>
+
+<main class="login-page">
+  <div class="login-wrapper">
+
+    <div class="login-box">
+      <h2>حساب ته ننوتل</h2>
+
+      <form>
+        <div class="input-group">
+          <label>بریښنالیک</label>
+          <input type="email" id="email" placeholder="info@gmail.com">
+        </div>
+
+        <div class="input-group">
+          <label>پټ نوم</label>
+          <input type="password" id="password" placeholder="********">
+        </div>
+
+        <button type="submit" onclick="loginUser()"><a href="index2.html">ننوتل</a></button>
+      </form>
+
+      <a href="index2.html" class="back-home">بیرته اصلي پاڼې ته</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="main-footer">
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h3>اړیکه</h3>
+      <p>📞 0700748864</p>
+      <p> موقیعیت: کابل، افغانستان</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>رسمي میډیا</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 ټول حقوق خوندي دي</p>
+  </div>
+</footer>
+
+</body>
+  <script type="text/javascript" src="./script.js"></script>
+  <script src="login.js"></script>
+</html>
